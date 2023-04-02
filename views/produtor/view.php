@@ -30,7 +30,11 @@ $this->params['breadcrumbs'][] = $this->title;
         'model' => $model,
         'attributes' => [
             'id',
-            'localidade_id',
+            //'localidade_id',
+            [
+                'attribute'=> 'localidade_id.nome',
+                'label'=>'localidade', 
+                ],
             'nome',
             'email:email',
             'senha',
