@@ -5,6 +5,8 @@ use yii\helpers\Html;
 use yii\helpers\Url;
 use yii\grid\ActionColumn;
 use yii\grid\GridView;
+use app\models\localidade;
+use yii\helpers\ArrayHelpers;
 
 /** @var yii\web\View $this */
 /** @var app\models\ProdutorSearch $searchModel */
@@ -30,10 +32,16 @@ $this->params['breadcrumbs'][] = $this->title;
             ['class' => 'yii\grid\SerialColumn'],
 
             'id',
-            'localidade_id',
+            //'localidade_id',
+            [
+                'attribute'=> 'localidade.nome',
+                'label'=>'Localidade',
+                
+                   
+            ],
             'nome',
             'email:email',
-            'senha',
+            
             [
                 'class' => ActionColumn::className(),
                 'urlCreator' => function ($action, produtor $model, $key, $index, $column) {

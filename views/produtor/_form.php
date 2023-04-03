@@ -2,6 +2,8 @@
 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
+use app\models\localidade;
+use yii\helpers\ArrayHelper;
 
 /** @var yii\web\View $this */
 /** @var app\models\produtor $model */
@@ -12,7 +14,13 @@ use yii\widgets\ActiveForm;
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'localidade_id')->textInput() ?>
+    
+    <?= $form->field($model, 'localidade_id')->
+        dropDownList(ArrayHelper::map(Localidade::find()
+            ->orderBy('nome')
+            ->all(),'id','nome'),
+            ['prompt' => 'Selecione uma Localidade.'] )
+    ?>
 
     <?= $form->field($model, 'nome')->textInput(['maxlength' => true]) ?>
 

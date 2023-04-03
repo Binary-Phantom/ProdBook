@@ -10,6 +10,7 @@ use yii\bootstrap5\Html;
 use yii\bootstrap5\Nav;
 use yii\bootstrap5\NavBar;
 
+
 AppAsset::register($this);
 
 $this->registerCsrfMetaTags();
@@ -41,9 +42,10 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
         'items' => [
             ['label' => 'Início', 'url' => ['/site/index']],
             ['label' => 'Sobre', 'url' => ['/site/about']],
-            ['label' => 'Cadastro', 'url' => ['/produtor/index']],
+            ['label' => 'Produtores', 'url' => ['/produtor/index']],
             ['label' => 'Perfil', 'url' => ['/produtor/index']],
-            ['label' => 'Cadastro', 'url' => ['/produtor/index']],
+            ['label' => 'Cadastro', 'url' => ['/produtor/create']],
+            ['label' => 'Marketplace', 'url' => ['/marketplace/create']],
             Yii::$app->user->isGuest
                 ? ['label' => 'Login', 'url' => ['/site/login']]
                 : '<li class="nav-item">'
