@@ -11,7 +11,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-    Produtor Book é uma rede social criada especialmente para produtores rurais de todo o mundo. A plataforma tem como objetivo conectar agricultores, pecuaristas e outros profissionais do campo, permitindo que eles troquem informações e conhecimentos sobre técnicas de produção, inovações tecnológicas, gestão financeira e outros assuntos relacionados à agricultura.
+    O Produtor Book é uma plataforma criada especialmente para produtores rurais de todo o mundo. A plataforma tem como objetivo conectar agricultores, pecuaristas e outros profissionais do campo, permitindo que eles troquem informações e conhecimentos sobre técnicas de produção, inovações tecnológicas, gestão financeira e outros assuntos relacionados à agricultura.
 
 A plataforma oferece uma ampla variedade de recursos, como fóruns de discussão, grupos de interesse, ferramentas de gestão agrícola, informações sobre mercado e preços, além de uma área exclusiva para compra e venda de produtos agropecuários.
 

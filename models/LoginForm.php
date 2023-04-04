@@ -19,7 +19,14 @@ class LoginForm extends Model
 
     private $_user = false;
 
-
+    public function attributeLabels()
+    {
+        return [
+            'username' => 'login',
+            'password' => 'Senha',
+            'rememberMe' => 'Lembrar-me',
+        ];
+    }
     /**
      * @return array the validation rules.
      */
@@ -48,7 +55,7 @@ class LoginForm extends Model
             $user = $this->getUser();
 
             if (!$user || !$user->validatePassword($this->password)) {
-                $this->addError($attribute, 'Incorrect username or password.');
+                $this->addError($attribute, 'ATENÇÃO! Email ou Senha incorretos.');
             }
         }
     }
@@ -73,7 +80,7 @@ class LoginForm extends Model
     public function getUser()
     {
         if ($this->_user === false) {
-            $this->_user = User::findByUsername($this->username);
+            $this->_user = produtor::findByUsername($this->username);
         }
 
         return $this->_user;
